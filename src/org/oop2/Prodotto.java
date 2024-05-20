@@ -6,12 +6,12 @@ import java.util.Random;
 public class Prodotto {
 
 
-    private String name;
-    private String description;
-    private BigDecimal  price ;
-    private BigDecimal iva ;
-    private String code;
-    private BigDecimal  pricewithiva ;
+   protected String name;
+   protected String description;
+   protected BigDecimal  price ;
+   protected BigDecimal iva ;
+   protected String code;
+   protected BigDecimal  pricewithiva ;
 
     /* Costruttore*/
     public Prodotto(String name, String description, String price, String iva){
@@ -25,7 +25,7 @@ public class Prodotto {
     }
 
     /*metodo che genera il codice */
-    private int generateCode(){
+    public int generateCode(){
         Random random = new Random();
         int barcode=random.nextInt(1000000);
         return barcode;
